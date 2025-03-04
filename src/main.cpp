@@ -1,51 +1,40 @@
 #include <iostream>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#include <./glad/glad.h>
+#include <./GLFW/glfw3.h>
 
-using namespace std; 
+int main() {
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
+    // Initializes glfw
+    glfwInit();
 
-int main()
-{
-    if (!glfwInit())
-    {
-        cout << "Failed to initialize GLFW" << endl;
-        return -1;
-    }
-
-    glfwWindowHint(GLFW_SAMPLES, 4);
+    // Tells glfw what versions to run
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+
+    // Tells glfw what package/profile to use in the program (core in this case)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window;
-    window = glfwCreateWindow(800, 600, "ZMMR", NULL, NULL);
-    if (window == NULL)
-    {
-        cout << "Failed to open GLFW window" << endl;
+    // Creates window object for OpenGL
+    GLFWwindow* window = glfwCreateWindow(800, 800, "General Relativity Simulation", NULL, NULL);
+
+    // Error checking
+    if (window == NULL) {
+        std::cout << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
         return -1;
     }
+
+    // Introduce window to current context
     glfwMakeContextCurrent(window);
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        cout << "Failed to initialize GLAD" << endl;
-        return -1;
+    // Makes OpenGL window stay until it closes
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
     }
 
-    glViewport(0, 0, 800, 600);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwDestroyWindow(window); // Destroys glfw window
+    glfwTerminate(); // Ends glfw when desired
 
-    while(!glfwWindowShouldClose(window))
-    {
-        glfwSwapBuffers(window);
-        glfwPollEvents();    
-    }
-
-    glfwTerminate();
     return 0;
+
 }
