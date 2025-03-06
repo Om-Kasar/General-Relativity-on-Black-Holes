@@ -15,8 +15,7 @@ int main() {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // Creates window object for OpenGL
-    GLFWwindow* window = glfwCreateWindow(800, 800, "General Relativity Simulation", NULL, NULL);
-
+    GLFWwindow* window = glfwCreateWindow(800, 800, "Black Hole Simulation", NULL, NULL);
     // Error checking
     if (window == NULL) {
         std::cout << "Failed to create GLFW window" << std::endl;
