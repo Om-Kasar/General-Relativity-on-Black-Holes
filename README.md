@@ -1,6 +1,6 @@
 ## General-Relativity-on-Black-Holes
 
-The GR black hole model is used to analyze the behavior of particles around a black hole, in both a astrophysics and quantum scale. The program uses both OpenGL and C++ in order to simulate the black hole and it's gravitational pull towards the particles near it, resulting in an accretion disk. Fundamentally, this involves how gravity is transferred in space, otherwise known as general relativity, in order to induce this gravitational pull towards the particles near the entity. Therefore, this simulation aims to give a scientifically accurate way of analyzing general relativity and it's applications through showing the movement of particles near a black hole.
+The General Relativity black hole model is used to analyze the behavior of particles around a black hole, in both a astrophysics and quantum scale. The program uses both OpenGL and C++ in order to simulate the black hole and it's gravitational pull towards the particles near it, resulting in an accretion disk. Fundamentally, this involves how gravity is transferred in space, otherwise known as general relativity, in order to induce this gravitational pull towards the particles near the entity. Therefore, this simulation aims to give a scientifically accurate way of analyzing general relativity and it's applications through showing the movement of particles near a black hole.
 
 ## Program Configurations and Concepts
 
