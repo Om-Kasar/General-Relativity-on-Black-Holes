@@ -1,3 +1,5 @@
+# CREATES CHRISTOFFEL SYMBOLS
+
 import sympy as sm
 from einsteinpy.symbolic import MetricTensor, ChristoffelSymbols
 
